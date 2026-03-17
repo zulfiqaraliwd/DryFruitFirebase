@@ -47,7 +47,7 @@ desc:"Almonds support heart health and boost energy."
 {
 id:6,
 name:"Cherry",
-price:500,
+price:2500,
 weight:"100g",
 img:"./Assets/cherry.jfif",
 desc:"Cherries are rich in antioxidants and improve sleep."
@@ -56,7 +56,7 @@ desc:"Cherries are rich in antioxidants and improve sleep."
 {
 id:7,
 name:"Dry Apricot",
-price:800,
+price:1100,
 weight:"1000g",
 img:"./Assets/faringg.jpg",
 desc:"Dry apricots are rich in vitamin A and fiber."
@@ -74,7 +74,7 @@ desc:"Mixed dry fruits boost immunity and provide energy."
 {
 id:9,
 name:"Salajeet",
-price:1000,
+price:3000,
 weight:"50g",
 img:"./Assets/salageet.jpg",
 desc:"Salajeet improves strength, stamina and energy."
@@ -101,7 +101,7 @@ desc:"Mulberries improve blood health and provide energy."
 {
 id:12,
 name:"Nuts",
-price:900,
+price:1500,
 weight:"1000g",
 img:"./Assets/starga.jfif",
 desc:"Nuts improve brain function and heart health."
@@ -110,7 +110,7 @@ desc:"Nuts improve brain function and heart health."
 {
 id:13,
 name:"Cooked Barley",
-price:200,
+price:1000,
 weight:"250g",
 img:"./Assets/yus(barley).jpg",
 desc:"Barley controls blood sugar and improves digestion."
@@ -128,7 +128,7 @@ desc:"Saffron improves mood, memory and immunity."
 {
 id:15,
 name:"Dry Rose",
-price:150,
+price:550,
 weight:"50g",
 img:"./Assets/dry rose.jfif",
 desc:"Dry rose reduces stress and improves digestion."
@@ -137,7 +137,7 @@ desc:"Dry rose reduces stress and improves digestion."
 {
 id:16,
 name:"Butter",
-price:1500,
+price:2200,
 weight:"500g",
 img:"./Assets/makhan.jfif",
 desc:"Butter provides energy and strengthens bones."
@@ -146,7 +146,7 @@ desc:"Butter provides energy and strengthens bones."
 {
 id:17,
 name:"Dry Rose Hips",
-price:500,
+price:800,
 weight:"100g",
 img:"./Assets/makhoom.jpg",
 desc:"Rose hips boost immunity and improve skin."
@@ -155,7 +155,7 @@ desc:"Rose hips boost immunity and improve skin."
 {
 id:18,
 name:"Apricot Oil",
-price:1700,
+price:2000,
 weight:"500g",
 img:"./Assets/chuli maar.jfif",
 desc:"Apricot oil nourishes skin and hair."
@@ -168,14 +168,26 @@ const renderProducts = document.getElementById("products");
 products.map((p)=>{
  renderProducts.innerHTML +=  `<div id="carts">
  <h1>${p.name}</h1>
- <p>ID : ${p.id}</p>
- <p>Weight : ${p.weight}</p>
+ <b>ID : ${p.id}</b>
+ <b>Weight : ${p.weight}</b>
+ <b>Price: ${p.price}</b>
  <img src="${p.img}" alt="" width = "200px", height = "200px">
  <p>${p.desc}</p>
  <button>Shop now </Button>
- </div`  
+ </div>`  
 })
 
 
+const cheap = document.getElementById('cheap')
+const filtered = cheap.filter(p=> p.price === price);
+cheap.innerHTML = "";
+filtered.forEach(p => {`
+       <h2>${p.name}</h2>
+            <p>Price: $${p.id}</p>
+            <p>Brand: ${p.weight}</p>
+            <p>Category: ${p.price}</p>
+        </div>
+    ` 
+});
 
 

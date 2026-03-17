@@ -147,3 +147,60 @@ color: white;
   box-shadow: 0 5px 10px rgba(0,0,0,0.2);
   transition: transform 0.2s;
 }
+
+
+
+#carts{
+width:260px;
+padding:15px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+background:white;
+font-family:Arial;
+text-align:center;
+transition:0.3s;
+margin:20px;
+}
+
+#carts:hover{
+transform:translateY(-5px);
+box-shadow:0 6px 15px rgba(0,0,0,0.2);
+}
+
+#carts h1{
+font-size:20px;
+margin-bottom:10px;
+}
+
+#carts b{
+display:block;
+font-size:14px;
+margin:5px 0;
+}
+
+#carts img{
+width:200px;
+height:200px;
+object-fit:cover;
+margin:10px 0;
+border-radius:8px;
+}
+
+#carts p{
+font-size:14px;
+color:#555;
+}
+
+#carts button{
+padding:10px 20px;
+border:none;
+background:#007bff;
+color:white;
+border-radius:5px;
+cursor:pointer;
+margin-top:10px;
+}
+
+#carts button:hover{
+background:#0056b3;
+}
