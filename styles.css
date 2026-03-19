@@ -140,7 +140,7 @@ color: white;
 }
 
 
-#carts{
+.carts{
   width: 18rem;
   border-radius: 10px;
   margin: 10px;
@@ -150,7 +150,7 @@ color: white;
 
 
 
-#carts{
+.carts{
 width:260px;
 padding:15px;
 border-radius:10px;
@@ -162,23 +162,23 @@ transition:0.3s;
 margin:20px;
 }
 
-#carts:hover{
+.carts:hover{
 transform:translateY(-5px);
 box-shadow:0 6px 15px rgba(0,0,0,0.2);
 }
 
-#carts h1{
+.carts h1{
 font-size:20px;
 margin-bottom:10px;
 }
 
-#carts b{
+.carts b{
 display:block;
 font-size:14px;
 margin:5px 0;
 }
 
-#carts img{
+.carts img{
 width:200px;
 height:200px;
 object-fit:cover;
@@ -186,12 +186,12 @@ margin:10px 0;
 border-radius:8px;
 }
 
-#carts p{
+.carts p{
 font-size:14px;
 color:#555;
 }
 
-#carts button{
+.carts button{
 padding:10px 20px;
 border:none;
 background:#007bff;
@@ -201,6 +201,20 @@ cursor:pointer;
 margin-top:10px;
 }
 
-#carts button:hover{
+.carts button:hover{
 background:#0056b3;
+}
+
+
+.cheap {
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cheap:hover {
+  background-color: darkgreen;
 }

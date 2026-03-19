@@ -165,29 +165,43 @@ desc:"Apricot oil nourishes skin and hair."
 
 const renderProducts = document.getElementById("products");
 
-products.map((p)=>{
- renderProducts.innerHTML +=  `<div id="carts">
- <h1>${p.name}</h1>
- <b>ID : ${p.id}</b>
- <b>Weight : ${p.weight}</b>
- <b>Price: ${p.price}</b>
- <img src="${p.img}" alt="" width = "200px", height = "200px">
- <p>${p.desc}</p>
- <button>Shop now </Button>
- </div>`  
-})
 
+// Render function using map
+function renderItems(items) {
+  renderProducts.innerHTML = items.map(p => `
+    <div class="carts">
+      <h2>${p.name}</h2>
+      <p>Price: $${p.price}</p>
+      <p>Weight: ${p.weight}</p>
+      <p>ID: ${p.id}</p>
+      <img src="${p.img}" width="200" height="200">
+      <p>${p.desc}</p>
+      <button onclick="addToCart(${p.id})">Add to Cart</button>
+    </div>
+  `).join("");
+}
 
-const cheap = document.getElementById('cheap')
-const filtered = cheap.filter(p=> p.price === price);
-cheap.innerHTML = "";
-filtered.forEach(p => {`
-       <h2>${p.name}</h2>
-            <p>Price: $${p.id}</p>
-            <p>Brand: ${p.weight}</p>
-            <p>Category: ${p.price}</p>
-        </div>
-    ` 
-});
+// Initial render: show all products
+renderItems(products);
+function filterByPrice(maxPrice) {
+  const container = document.getElementById("products");
+
+  const filtered = products
+    .filter(p => p.price <= maxPrice)
+    .map(p => `
+      <div class="carts">
+        <h2>${p.name}</h2>
+        <p>Price: $${p.price}</p>
+        <p>Weight: ${p.weight}</p>
+        <p>ID: ${p.id}</p>
+        <img src="${p.img}" width="200" height="200">
+        <p>${p.desc}</p>
+        <button onclick="addToCart(${p.id})">Add to Cart</button>
+      </div>
+    `)
+    .join("");
+
+  container.innerHTML = filtered;
+}
 
 

@@ -114,12 +114,13 @@
     <!-- SEARCH + FILTER -->
 
     <div class="container d-flex justify-content-center gap-3 mt-5">
-    <button id="cheap" class="btn btn-success">All Products</button>
-      <button id="cheap" class="btn btn-success">Price Under 1000</button>
-      <button id="cheap" class="btn btn-success">Price Under 1500</button>
-      <button id="cheap" class="btn btn-success">Price Under 2000</button>
-      <button id="cheap" class="btn btn-success">Price Under 3000</button>
-      <button id="cheap" class="btn btn-success">Price upto 4000 </button>
+      
+      <button class="cheap " onclick="price()">All Products</button>
+      <button class="cheap" onclick="price(1000)">Price Under 1000</button>
+      <button class="cheap" onclick="price(1500)">Price Under 1500</button>
+      <button class="cheap" onclick="price(2000)">Price Under 2000</button>
+      <button class="cheap" onclick="price(3000)">Price Under 3000</button>
+      <button class="cheap" onclick="price(4000)">Price upto 4000 </button>
     </div>
 
     <!-- PRODUCTS RENDER HERE -->
