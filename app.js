@@ -1,3 +1,6 @@
+
+import { db, collection, addDoc } from "./config.js";
+
 const products = [
 {
 id:1,
@@ -183,25 +186,38 @@ function renderItems(items) {
 
 // Initial render: show all products
 renderItems(products);
-function filterByPrice(maxPrice) {
-  const container = document.getElementById("products");
-
-  const filtered = products
-    .filter(p => p.price <= maxPrice)
-    .map(p => `
-      <div class="carts">
-        <h2>${p.name}</h2>
-        <p>Price: $${p.price}</p>
-        <p>Weight: ${p.weight}</p>
-        <p>ID: ${p.id}</p>
-        <img src="${p.img}" width="200" height="200">
-        <p>${p.desc}</p>
-        <button onclick="addToCart(${p.id})">Add to Cart</button>
-      </div>
-    `)
-    .join("");
-
-  container.innerHTML = filtered;
+window.price = function (maxPrice) {
+  if (maxPrice === undefined) {
+    // If no maxPrice is provided, show all products
+    renderItems(products);
+  } else {
+    // Filter products by maxPrice and render them
+    const filtered = products.filter((p) => p.price <= maxPrice);
+    renderItems(filtered);
+  }
 }
 
 
+
+// Global Add to Cart function for Firestore storage
+window.addToCart = async function (productId) {
+  const product = products.find((p) => p.id === productId);
+  if (!product) {
+    alert("Product not found!");
+    return;
+  }
+
+  try {
+    const docRef = await addDoc(collection(db, "cart"), {
+      productId: product.id,
+      name: product.name,
+      price: product.price,
+      weight: product.weight,
+      addedAt: new Date()
+    });
+    alert(`Success! "${product.name}" added to Firestore cart.\nID: ${docRef.id}`);
+  } catch (error) {
+    console.error("Error adding to cart: ", error);
+    alert("Error adding to cart: " + error.message);
+  }
+};

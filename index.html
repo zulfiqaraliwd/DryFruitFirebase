@@ -1,192 +1,173 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>UnitedMarkhor Dry_Fruits</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="stylesheet" href="styles.css" />
+  <title>UnitedMarkhor Dry_Fruits</title>
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+  <link rel="stylesheet" href="styles.css" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap"
-      rel="stylesheet"
-    />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    />
-  </head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap" rel="stylesheet" />
 
-  <body>
-    <!-- HEADER -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+</head>
 
-    <header
-      class="container-fluid border border-2 d-flex flex-wrap justify-content-between align-items-center gap-5"
-    >
-      <div class="logo">
-        <img class="border border-3 rounded-circle" src="./mylogo.png" />
-      </div>
+<body>
+  <!-- HEADER -->
 
-      <nav class="nav d-none d-sm-block">
-        <ul class="nav gap-3">
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
-          <li><input type="Search" placeholder="search" /></li>
-        </ul>
-      </nav>
-
-      <div class="btn">
-        <a href="./cart.html" class="icon-link">
-          <i class="fa-solid fa-cart-shopping"></i>
-        </a>
-
-        <a href="signup.html" class="btn">Sign Up</a>
-        <a href="login.html" class="btn">Sign in</a>
-      </div>
-    </header>
-
-    <br />
-
-    <!-- TITLE -->
-
-    <div class="text-center mt-5 mt-sm-3">
-      <hgroup>
-        <h1 class="animate__animated animate__backInRight">Our Products</h1>
-
-        <h4 class="animate__animated animate__fadeInLeft">
-          Discover healthy dry fruits and unlock amazing offers now.
-        </h4>
-      </hgroup>
+  <header class="container-fluid border border-2 d-flex flex-wrap justify-content-between align-items-center gap-5">
+    <div class="logo">
+      <img class="border border-3 rounded-circle" src="./mylogo.png" />
     </div>
 
-    <!-- CAROUSEL -->
-
-    <div id="carouselExampleFade" class="carousel slide carousel-fade">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="./Assets/fruit-1.webp" class="d-block w-100" />
-        </div>
-
-        <div class="carousel-item">
-          <img src="./Assets/fruit-2.jpg" class="d-block w-100" />
-        </div>
-
-        <div class="carousel-item">
-          <img src="./Assets/fruit-3.jpg" class="d-block w-100" />
-        </div>
-      </div>
-
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExampleFade"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon"></span>
-      </button>
-
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExampleFade"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon"></span>
-      </button>
-    </div>
-
-    <!-- SEARCH + FILTER -->
-
-    <div class="container d-flex justify-content-center gap-3 mt-5">
-      
-      <button class="cheap " onclick="price()">All Products</button>
-      <button class="cheap" onclick="price(1000)">Price Under 1000</button>
-      <button class="cheap" onclick="price(1500)">Price Under 1500</button>
-      <button class="cheap" onclick="price(2000)">Price Under 2000</button>
-      <button class="cheap" onclick="price(3000)">Price Under 3000</button>
-      <button class="cheap" onclick="price(4000)">Price upto 4000 </button>
-    </div>
-
-    <!-- PRODUCTS RENDER HERE -->
-
-    <div
-      id="products"
-      class="d-flex flex-wrap gap-3 container-fluid mx-auto m-5"
-    ></div>
-
-    <!-- FOOTER -->
-
-    <footer class="foot container-fluid d-flex flex-column">
-      <h2 class="text-center">UnitedMarkhor Dry_Fruits</h2>
-
-      <h5 class="quality text-center">Premium Quality • Trusted • Organic</h5>
-
-      <h3 class="text-center">Quick Links :</h3>
-
-      <ul
-        class="d-flex gap-5 container-fluid list-unstyled justify-content-center"
-      >
-        <li><h4>Home</h4></li>
-        <li><h4>About</h4></li>
-        <li><h4>Contact</h4></li>
-        <li><h4>Upcoming Products</h4></li>
+    <nav class="nav d-none d-sm-block">
+      <ul class="nav gap-3">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li><input type="Search" placeholder="search" /></li>
       </ul>
+    </nav>
 
-      <div class="text-center">
-        <h1 class="text-white">Social Media Links</h1>
+    <div class="btn">
+      <a href="carts.html" class="icon-link">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </a>
 
-        <ul class="d-flex justify-content-center">
-          <li>
-            <a href="https://www.facebook.com/shaheenmujahidthalavi.thalavi">
-              <i class="fa-brands fa-facebook"></i>
-            </a>
-          </li>
+      <a href="signup.html" class="btn">Sign Up</a>
+      <a href="login.html" class="btn">Sign in</a>
+    </div>
+  </header>
 
-          <li>
-            <a href="">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-          </li>
-        </ul>
+  <br />
+
+  <!-- TITLE -->
+
+  <div class="text-center mt-5 mt-sm-3">
+    <hgroup>
+      <h1 class="animate__animated animate__backInRight">Our Products</h1>
+
+      <h4 class="animate__animated animate__fadeInLeft">
+        Discover healthy dry fruits and unlock amazing offers now.
+      </h4>
+    </hgroup>
+  </div>
+
+  <!-- CAROUSEL -->
+
+  <div id="carouselExampleFade" class="carousel slide carousel-fade">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./Assets/fruit-1.webp" class="d-block w-100" />
       </div>
 
-      <h3 class="text-center">
-        Zulfiqar Ali — Founder & CEO, UnitedMarkhor Dry_Fruits
-      </h3>
-
-      <h5 class="text-center">
-        Bringing you the finest hand-picked dry fruits.
-      </h5>
-
-      <div class="copy">
-        <p class="text-center">
-          © 2026 UnitedMarkhor Dry_Fruits. All Rights Reserved
-        </p>
+      <div class="carousel-item">
+        <img src="./Assets/fruit-2.jpg" class="d-block w-100" />
       </div>
-    </footer>
 
-    <!-- BOOTSTRAP JS -->
+      <div class="carousel-item">
+        <img src="./Assets/fruit-3.jpg" class="d-block w-100" />
+      </div>
+    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
 
-    <!-- APP JS -->
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
 
-    <script type="module" src="app.js"></script>
-  </body>
+  <!-- SEARCH + FILTER -->
+
+  <div class="container d-flex justify-content-center gap-3 mt-5">
+
+    <button class="cheap " onclick="price()">All Products</button>
+    <button class="cheap" onclick="price(1000)">Price Under 1000</button>
+    <button class="cheap" onclick="price(1500)">Price Under 1500</button>
+    <button class="cheap" onclick="price(2000)">Price Under 2000</button>
+    <button class="cheap" onclick="price(3000)">Price Under 3000</button>
+    <button class="cheap" onclick="price(4000)">Price upto 4000 </button>
+  </div>
+
+  <!-- PRODUCTS RENDER HERE -->
+
+  <div id="products" class="d-flex flex-wrap gap-3 container-fluid mx-auto m-5"></div>
+
+  <!-- FOOTER -->
+
+  <footer class="foot container-fluid d-flex flex-column">
+    <h2 class="text-center">UnitedMarkhor Dry_Fruits</h2>
+
+    <h5 class="quality text-center">Premium Quality • Trusted • Organic</h5>
+
+    <h3 class="text-center">Quick Links :</h3>
+
+    <ul class="d-flex gap-5 container-fluid list-unstyled justify-content-center">
+      <li>
+        <h4>Home</h4>
+      </li>
+      <li>
+        <h4>About</h4>
+      </li>
+      <li>
+        <h4>Contact</h4>
+      </li>
+      <li>
+        <h4>Upcoming Products</h4>
+      </li>
+    </ul>
+
+    <div class="text-center">
+      <h1 class="text-white">Social Media Links</h1>
+
+      <ul class="d-flex justify-content-center">
+        <li>
+          <a href="https://www.facebook.com/shaheenmujahidthalavi.thalavi">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+        </li>
+
+        <li>
+          <a href="">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <h3 class="text-center">
+      Zulfiqar Ali — Founder & CEO, UnitedMarkhor Dry_Fruits
+    </h3>
+
+    <h5 class="text-center">
+      Bringing you the finest hand-picked dry fruits.
+    </h5>
+
+    <div class="copy">
+      <p class="text-center">
+        © 2026 UnitedMarkhor Dry_Fruits. All Rights Reserved
+      </p>
+    </div>
+  </footer>
+
+  <!-- BOOTSTRAP JS -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- APP JS -->
+
+  <script type="module" src="app.js"></script>
+</body>
+
 </html>
